@@ -1,9 +1,6 @@
 package com.doc.doctor.models;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.MappedSuperclass;
+import jakarta.persistence.*;
 import lombok.*;
 
 @MappedSuperclass
@@ -18,8 +15,10 @@ public class User {
     protected Long id;
 
     @NonNull
+    @Column(length = 25)
     protected String username;
     @NonNull
+    @Column(length = 80)
     protected String email;
     @NonNull
     protected String password;

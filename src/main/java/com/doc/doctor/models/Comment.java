@@ -16,6 +16,7 @@ public class Comment {
     private String body;
     @ManyToOne
     private Post post;
+
     @OneToMany(mappedBy = "comment")
     private List<Response> responses;
 }

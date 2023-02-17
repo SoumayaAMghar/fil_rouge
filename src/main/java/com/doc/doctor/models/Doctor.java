@@ -1,5 +1,6 @@
 package com.doc.doctor.models;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToMany;
 import lombok.Getter;
@@ -14,7 +15,9 @@ import java.util.List;
 @Setter
 @ToString
 public class Doctor extends User{
-    private Integer phone;
+
+    @Column(length = 14)
+    private String phone;
     private String picture;
     private String speciality;
     @OneToMany(mappedBy = "doctor")
