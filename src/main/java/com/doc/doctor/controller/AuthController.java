@@ -36,12 +36,11 @@ public class AuthController {
     }
     @PostMapping("register")
     public ResponseEntity<String> register(@RequestBody RegisterDto registerDto){
-        if (doctorRepository.existsByEmail(registerDto.getEmail())
-//                || docotorRepository.existsAdoptantByEmail(registerDto.email())
-        ) {
+        if (doctorRepository.existsByEmail(registerDto.getEmail()))
+        {
             return new ResponseEntity<>("Email is taken! ", HttpStatus.BAD_REQUEST);
         }
-//        System.out.println(registerDto.getrole());
+
         Doctor user =new Doctor();
         user.setUsername(registerDto.getUsername());
         user.setEmail(registerDto.getEmail());
@@ -55,16 +54,8 @@ public class AuthController {
 
         doctorRepository.save(user);
         return new ResponseEntity<>("User registred success!", HttpStatus.OK);
-
-
-//        if (registerDto.role().equals(UserRoles.ADOPTANT)) {
-//            Adoptant adoptant = new Adoptant(registerDto.name(), registerDto.email(), passwordEncoder.encode(registerDto.password()), registerDto.address(), registerDto.tel(), registerDto.nbr_animaux(), registerDto.role());
-//            adoptantRepository.save(adoptant);
-//        } else {
-//            Client client = new Client(registerDto.name(), registerDto.email(), passwordEncoder.encode(registerDto.password()), registerDto.address(), registerDto.tel(), registerDto.role());
-//            clientRepository.save(client);
-//        }
-//        return new ResponseEntity<>("User registred succesfully", HttpStatus.OK);
     }
+
+
 }
 

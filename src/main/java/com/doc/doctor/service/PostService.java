@@ -16,6 +16,7 @@ public class PostService {
     }
 
     public Post addPost(Post post){
+
         return postRepository.save(post);
     }
     public List<Post> finAllPost(){
@@ -27,6 +28,7 @@ public class PostService {
         return postRepository.save(post);
     }
     public void deletePost(Long id){
+
         postRepository.deleteById(id);
     }
 //    public Post findPostById(Long id){
