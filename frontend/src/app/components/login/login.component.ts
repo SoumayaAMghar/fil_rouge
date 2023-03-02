@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { LoginRequest } from '../models/LoginRequest';
-import { LoginResponse } from '../models/LoginResponse';
-import { AuthService } from '../services/auth/auth.service';
+import { LoginRequest } from '../../models/LoginRequest';
+import { LoginResponse } from '../../models/LoginResponse';
+import { AuthService } from '../../services/auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -20,7 +20,7 @@ export class LoginComponent {
       this.authService.login(request).subscribe((response: LoginResponse) => {
         // handle the token returned by the backend
         localStorage.setItem('token', response.accessToken);
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/home']);
       });
   }  
 }
