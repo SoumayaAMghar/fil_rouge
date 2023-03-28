@@ -1,0 +1,66 @@
+<div class="flex h-screen w-full items-center justify-center bg-gray-900 bg-cover bg-no-repeat" style="background-image:url('https://www.kevinmd.com/wp-content/uploads/shutterstock_1029420874.jpg')">
+    <div class="rounded-xl bg-gray-800 bg-opacity-50 px-16 py-10 shadow-lg backdrop-blur-md max-sm:px-8">
+      <div class="text-white">
+        <div class="mb-8 flex flex-col items-center">
+          <img src="https://cdn-icons-png.flaticon.com/512/3000/3000235.png" width="150" alt="" srcset="" />
+          <!-- <h1 class="mb-2 text-2xl">Doctors</h1> -->
+          <!-- <span class="text-gray-300">Enter Login Details</span> -->
+        </div>
+        <form (ngSubmit)="register()">
+            <div class="mb-4 text-lg">
+                <input [(ngModel)]="username" class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="text" name="username" placeholder="enter your username" />
+            </div>
+            <div class="mb-4 text-lg">
+                <input [(ngModel)]="email" class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="email" name="email" placeholder="enter your email" />
+            </div>
+    
+            <div class="mb-4 text-lg">
+                <input [(ngModel)]="password" class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="Password" name="password" placeholder="*******" />
+            </div>
+            <div class="mb-4 text-lg">
+                <input [(ngModel)]="phone" class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="text" name="phone" placeholder="enter your phone" />
+            </div>
+           
+            <div class="mb-4 text-lg">
+                <input [(ngModel)]="speciality" class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="text" name="speciality" placeholder="enter your speciality" />
+            </div>
+            <div class="mb-4 text-lg">
+                <input [(ngModel)]="picture" class=" w-60 rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="file" name="picture" placeholder="enter your speciality" />
+            </div>
+
+            <!-- <div class="mb-4 text-lg">
+                <label class="mb-5 block text-xl font-semibold text-white">
+                    Upload your picture
+                  </label>
+                  <div class="mb-8">
+                    <label
+                      for="file"
+                      class="relative flex min-h-[200px] items-center justify-center rounded-md border border-dashed border-[#e0e0e0] p-12 text-center"
+                    >
+                      <div>
+                        <span
+                          class=" w-7 inline-flex rounded border border-[#e0e0e0] py-2 px-7 text-base font-medium text-[#07074D]"
+                        >
+                        <input [(ngModel)]="picture" type="file" name="picture" class="w-4"/>
+                        </span>
+                      </div>
+                    </label>
+                  </div>
+            </div>  -->
+
+            <div class="mt-8 flex justify-center text-lg text-black">
+                <button type="submit" class="rounded-3xl bg-yellow-400 bg-opacity-50 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-yellow-600">Register</button>
+            </div>
+        </form>
+        <div class="text-center">
+            <button (click)="goToLoginPage()" class="inline-block text-sm text-white align-baseline hover:text-blue-800 mt-3">
+                Already have an account? Login!
+            </button>
+        </div>
+
+        
+        <!-- <button (click)="goToLoginPage()">Login</button> -->
+        
+      </div>
+    </div>
+  </div>

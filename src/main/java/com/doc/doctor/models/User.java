@@ -13,7 +13,7 @@ import java.util.List;
 @RequiredArgsConstructor
 @NoArgsConstructor
 public class User {
-    @Id
+     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     protected Long id;
 

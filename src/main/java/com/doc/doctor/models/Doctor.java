@@ -1,8 +1,6 @@
 package com.doc.doctor.models;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.OneToMany;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -15,7 +13,11 @@ import java.util.List;
 @Setter
 @ToString
 public class Doctor extends User{
-
+   /*
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+*/
     @Column(length = 14)
     private String phone;
     private String picture;

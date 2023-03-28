@@ -10,7 +10,7 @@ public class AuthRequestDto {
     private String name;
     private String email;
     private String password;
-//    String address, String tel, Integer nbr_animaux, UserRoles role){}
+//    String address, String tel, UserRoles role){}
 
 
 }

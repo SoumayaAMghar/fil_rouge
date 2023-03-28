@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute  } from '@angular/router';
 import { LoginRequest } from '../../models/LoginRequest';
 import { LoginResponse } from '../../models/LoginResponse';
 import { AuthService } from '../../services/auth/auth.service';
@@ -13,7 +13,8 @@ export class LoginComponent {
   email = '';
   password = '';
 
-  constructor(private authService: AuthService, private router: Router) {}
+  constructor(private authService: AuthService, private router: Router,
+    private route: ActivatedRoute) {}
 
   login() {
       const request = new LoginRequest(this.email, this.password);
@@ -22,5 +23,8 @@ export class LoginComponent {
         localStorage.setItem('token', response.accessToken);
         this.router.navigate(['/home']);
       });
+  }
+  goToRegisterPage() {
+    this.router.navigate(['/register']);
   }  
 }
